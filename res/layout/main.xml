@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:gravity="top"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_height="wrap_content"
+		android:text="My AlarmClock"
+		android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="match_parent"
+		android:gravity="center|center_vertical|center_horizontal"
+		android:textSize="40sp"
+		android:textColor="#FFFFFF"/>
+
+	<TextClock
+		android:format12Hour="hh:mm a"
+		android:format24Hour="HH:mm"
+		android:textSize="70sp"
+		android:shadowColor="#7fffffff"
+		android:shadowRadius="3.0"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center|center_vertical|center_horizontal"
+		android:padding="25dp"
+		android:textColor="#000000"
+		android:background="#FFFFFF"/>
+
+	<ListView
+		android:id="@+id/mainListView1"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"/>
+
+</LinearLayout>
+
