@@ -8,7 +8,6 @@ public class AlarmReceiver extends BroadcastReceiver
 	@Override
 	public void onReceive(Context context, Intent intent)
 	{
-		// 我能说这一段完全是抄的咩？？
 		if (intent.getAction().equals("true"))
 		{
 			// Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();

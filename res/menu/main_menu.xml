@@ -3,7 +3,7 @@
 
 	<item
 		android:id="@+id/mainMenuNew"
-		android:title="New Alarm" />
+		android:title="Add" />
 	<item
 		android:id="@+id/mainMenuAbout"
         android:title="About" />

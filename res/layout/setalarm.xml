@@ -73,7 +73,7 @@
 			android:layout_margin="10dp"
 			android:layout_marginLeft="100dp"
 			android:layout_weight="1.0"
-			android:id="@+id/setalarmSwitch1"/>
+			android:id="@+id/repeat"/>
 
 	</LinearLayout>
 

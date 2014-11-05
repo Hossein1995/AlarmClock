@@ -8,15 +8,20 @@ import android.widget.*;
 import android.widget.AdapterView.*;
 import java.util.*;
 
+// used to save alarm (which is not finished yet)
 class my_alarm
 {
 	private String name;
 	private String time;
+	private int hour;
+	private int min;
 	
 	my_alarm()
 	{
 		name = "Alarm";
-		time = "12 : 00";
+		hour = 12;
+		min = 0;
+		time = "12:00";
 	}
 
 	public String getInfo()
@@ -27,7 +32,6 @@ class my_alarm
 
 public class MainActivity extends Activity
 {
-	// List
 	List alarms = new ArrayList();
 	my_alarm a1 = new my_alarm();
 	my_alarm a2 = new my_alarm();
@@ -39,9 +43,10 @@ public class MainActivity extends Activity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 		
-		// Alarm List
+		// Alarm List (This is not finished yet)
 		alarms.add(a1.getInfo());
 		alarms.add(a2.getInfo());
+		// ListAdapter
 		ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, alarms);
 		ListView listView = (ListView) findViewById(R.id.mainListView1);
 		listView.setAdapter(adapter);
@@ -58,12 +63,12 @@ public class MainActivity extends Activity
 		
 		
     }
-	// Send Broadcast
-	public void send(View v)
+	
+    // "Add" Button
+	public void onAddClick(View v)
 	{
-		Intent intent = new Intent("android.intent.action.Alarm");
-		intent.putExtra("alarm", "start");
-		sendBroadcast(intent);
+		Intent intent = new Intent(this, SetAlarmActivity.class);
+		startActivity(intent);
 	}
 
 	// Menu Options
@@ -75,7 +80,8 @@ public class MainActivity extends Activity
 		inflater.inflate(R.menu.main_menu, menu);
 		return true;
 	}
-
+	
+	// Click Menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item)
 	{

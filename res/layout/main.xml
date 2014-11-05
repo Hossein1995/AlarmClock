@@ -28,6 +28,14 @@
 		android:textColor="#000000"
 		android:background="#FFFFFF"/>
 
+	<Button
+		android:layout_height="wrap_content"
+		android:text="Add..."
+		android:layout_width="match_parent"
+		android:layout_marginLeft="20dp"
+		android:layout_marginRight="20dp"
+		android:onClick="onAddClick"/>
+
 	<ListView
 		android:id="@+id/mainListView1"
 		android:layout_height="wrap_content"
